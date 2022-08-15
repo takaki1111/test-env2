@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 import streamlit as st
 import requests
 import openai
-from os.path import join, dirname
+
 # .env ファイルをロードして環境変数へ反映
 
 load_dotenv()
