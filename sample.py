@@ -4,18 +4,27 @@ from dotenv import load_dotenv
 import streamlit as st
 import requests
 import openai
+from os.path import join, dirname
 
+load_dotenv(verbose=True)
+
+dotenv_path = join(dirname(__file__), '.env')
+load_dotenv(dotenv_path)
+
+
+API_KEY = os.environ.get('API_KEY')
+
+print(API_KEY)
 
 #st.header("チャットボット_高橋")
 # .envファイルの内容を読み込見込む
-load_dotenv()
 
 # os.environを用いて環境変数を表示させます
 #print(os.environ['API_KEY'])
 #st.header(test)
 
 
-openai.api_key = os.environ['API_KEY']
+openai.api_key = API_KEY
 
 def text_summary(prompt):
     # 分析の実施
