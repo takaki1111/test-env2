@@ -12,7 +12,7 @@ load_dotenv()
 
 # os.environを用いて環境変数を表示させます
 #print(os.environ['API_KEY'])
-st.header(test)
+#st.header(test)
 
 
 openai.api_key = os.environ['API_KEY']
