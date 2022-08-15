@@ -5,16 +5,16 @@ import streamlit as st
 import requests
 import openai
 from os.path import join, dirname
+# .env ファイルをロードして環境変数へ反映
 
-load_dotenv(verbose=True)
+load_dotenv()
 
-dotenv_path = join(dirname(__file__), '.env')
-load_dotenv(dotenv_path)
+# 環境変数を参照
+
+API_KEY = os.getenv('API_KEY')
 
 
-API_KEY = os.environ.get('API_KEY')
-
-print(API_KEY)
+#print(API_KEY)
 
 #st.header("チャットボット_高橋")
 # .envファイルの内容を読み込見込む
