@@ -5,23 +5,7 @@ import streamlit as st
 import requests
 import openai
 
-# .env ファイルをロードして環境変数へ反映
-
-load_dotenv()
-
-# 環境変数を参照
-
-API_KEY = os.getenv('API_KEY')
-
-
-#print(API_KEY)
-
-#st.header("チャットボット_高橋")
-# .envファイルの内容を読み込見込む
-
-# os.environを用いて環境変数を表示させます
-#print(os.environ['API_KEY'])
-#st.header(test)
+API_KEY = st.secrets.OpenAI.API_KEY
 
 
 openai.api_key = API_KEY
